@@ -4,8 +4,16 @@
 		"selected_items":
 		[
 			[
+				"scr",
+				"scrollable"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
 				"over",
-				"overflow-y"
+				"overflow"
 			],
 			[
 				"wr",
@@ -78,10 +86,6 @@
 			[
 				"la",
 				"layout\t(String)"
-			],
-			[
-				"st",
-				"style\t(String)"
 			],
 			[
 				"outp",
@@ -510,10 +514,6 @@
 			[
 				"subStr",
 				"PUBLIC substringBetween(String open, String close) \tString"
-			],
-			[
-				"p",
-				"pattern_raw"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 2263,
+				"buffer_size": 2514,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -532,17 +532,16 @@
 			"file": "app/js/ngCtrl.js",
 			"settings":
 			{
-				"buffer_size": 4216,
+				"buffer_size": 4343,
 				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "angular.module('drawingApp',[])"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "app/js/ngPainterComponent.js",
 			"settings":
 			{
-				"buffer_size": 7283,
+				"buffer_size": 7198,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -551,26 +550,16 @@
 			"file": "app/template/painterTemplate.html",
 			"settings":
 			{
-				"buffer_size": 232,
+				"buffer_size": 525,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "test_file.py",
+			"file": "app.yaml",
 			"settings":
 			{
-				"buffer_size": 486106,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "xx = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUg"
-			}
-		},
-		{
-			"file": "main.py",
-			"settings":
-			{
-				"buffer_size": 1414,
+				"buffer_size": 374,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -732,14 +721,18 @@
 		"/D/Python/PDFWritter",
 		"/D/Python/PDFWritter/app",
 		"/D/Python/PDFWritter/app/js",
-		"/D/Python/PDFWritter/app/lib",
-		"/D/Python/PDFWritter/app/lib/js",
 		"/D/Python/PDFWritter/app/template"
 	],
 	"file_history":
 	[
-		"/D/Python/PDFWritter/app/js/ngHttpFactory.js",
 		"/D/Python/PDFWritter/app/template/painterTemplate.html",
+		"/D/Python/PDFWritter/app/test.html",
+		"/D/Python/PDFWritter/app/js/ngCtrl.js",
+		"/D/Python/PDFWritter/app.yaml",
+		"/D/Python/PDFWritter/main.py",
+		"/D/Python/PDFWritter/test_file.py",
+		"/D/Python/PDFWritter/app/js/ngPainterComponent.js",
+		"/D/Python/PDFWritter/app/js/ngHttpFactory.js",
 		"/D/Python/PDFWritter/app/js/ngDrawingFactory.js",
 		"/D/Python/PDFWritter/app/js/ngDrawingController.js",
 		"/D/Python/PDFWritter/app/index.html",
@@ -859,17 +852,11 @@
 		"/D/APEX/u Lab - Form Generator UI/src/pages/SWTest_FontPDF.page-meta.xml",
 		"/D/APEX/u Lab - Form Generator UI/src/components/uLab_EditForm_AdvanceEditComponent.component-meta.xml",
 		"/D/APEX/Plan B - Dev/src/components/ngQuotationLineItemSFDCFactory.component",
-		"/D/APEX/u Lab - Form Generator UI/src/components/uLab_EditForm_DroppableComponent.component",
-		"/D/APEX/u Lab - Form Generator UI/src/pages/Test_SLDSPage.page",
-		"/D/APEX/u Lab - Form Generator UI/src/pages/Test_IFramePage.page",
-		"/D/APEX/u Lab - Form Generator UI/src/pages/Test_CallIFramePage.page",
-		"/D/APEX/u Lab - Form Generator UI/src/pages/TestSW_PromisePage.page",
-		"/D/APEX/u Lab - Form Generator UI/src/classes/uLab_NewFormObjectController.cls",
-		"/D/APEX/u Lab - Form Generator UI/src/components/uLab_EditForm_MainController.component-meta.xml"
+		"/D/APEX/u Lab - Form Generator UI/src/components/uLab_EditForm_DroppableComponent.component"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -883,6 +870,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"outsideVar",
+			"ctrl.editMode",
 			"true",
 			"btn btn-primary",
 			"isTouch",
@@ -962,15 +951,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2263,
+						"buffer_size": 2514,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1835,
-								1835
+								755,
+								755
 							]
 						],
 						"settings":
@@ -980,7 +969,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -992,38 +981,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4216,
+						"buffer_size": 4343,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								3916,
-								3916
+								621,
+								621
 							]
 						],
 						"settings":
 						{
-							"auto_name": "angular.module('drawingApp',[])",
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 990.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1032,26 +1011,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7283,
+						"buffer_size": 7198,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1320,
-								1320
+								679,
+								679
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 315.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1060,15 +1041,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 232,
+						"buffer_size": 525,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								41,
-								41
+								111,
+								111
 							]
 						],
 						"settings":
@@ -1079,41 +1060,31 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "test_file.py",
+					"file": "app.yaml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 486106,
+						"buffer_size": 374,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13,
-								13
+								169,
+								169
 							]
 						],
 						"settings":
 						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"auto_name": "xx = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUg",
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1121,57 +1092,13 @@
 					},
 					"stack_index": 4,
 					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "main.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1414,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								832,
-								832
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -1212,7 +1139,7 @@
 	"project": "PDFWritter.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -4,12 +4,10 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Labratory: Drawing on PDF file</title>
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
     <link href="/lib/css/style.css" rel="stylesheet">
     <script src="/lib/js/jquery.min.js"></script>
-    <script src="/lib/js/bootstrap.min.js"></script>
     <script src="/lib/js/angular.min.js"></script>
     <script src="/lib/js/$QDecorator.js"></script>
     <script src="/lib/js/jspdf.min.js"></script>
@@ -17,13 +15,8 @@
     <script src="/js/ngPainterComponent.js"></script>
     <script src="/js/ngHttpFactory.js"></script>
     <script src="/lib/js/build/pdf.js"></script>
-    <script src="/lib/js/build/pdf.worker.js"></script>
-    <!-- <script src="/lib/css/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-    <link href="/lib/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="/lib/css/devicons/css/devicons.min.css" rel="stylesheet"/>
-    <link href="/lib/css/simple-line-icons/css/simple-line-icons.css" rel="stylesheet"/>
     <style type="text/css">
-        .scrollable{
+        .u-scrollable{
             overflow: auto;
         }
         .unscrollable{
@@ -33,7 +26,7 @@
             display: none !important;
         }
         .fit-screen{
-            width:100% !important;
+            max-width:100% !important;
             height:80%;
         }
     </style>
@@ -42,21 +35,26 @@
 <body ng-app="drawingApp" style="height: 100vh;" >
 	<div ng-controller="drawingController as ctrl" style="padding-bottom: 2rem;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" style="width:100%;">
-            <button class="btn btn-default " ng-click="ctrl.changePage(1);" >changePage 1 </button> 
-            <button class="btn btn-primary " ng-click="ctrl.changePage(2);" >changePage 2 </button>
-            <button class="btn btn-primary " ng-click="ctrl.savePage();" >Save </button>
-            <button class="btn btn-primary " ng-click="ctrl.toggleEditMode();" >Toggle </button>
+            <div class="btn-group pull-left">
+                <button class="btn btn-default " ng-click="ctrl.changePage(1);">Previous</button> 
+                <button class="btn btn-default " ng-click="ctrl.changePage(2);">Next</button>
+            </div>
+            <div class="btn-group pull-right">
+                <button class="btn btn-warning " ng-click="ctrl.toggleEditMode();" 
+                    ng-class="{true: 'btn-primary', false: 'btn-danger'}[!ctrl.editMode]">Edit</button>
+                <button class="btn btn-success " ng-click="ctrl.savePage();">Save</button>
+            </div>
         </nav>
         
         <div class="container-fluid p-0">
-            <div style="text-align:center;padding:top;height: 85vh;"    > 
+            <div style="text-align:center;height: 85vh;"> 
     		    <painter  ng-repeat="page in ctrl.pdfComponent" 
-                        component-id="page.componentid"
-                        option="page.option"
-                        pdf-obj="page.pdfobj" 
-                        page-numb="page.pagenumb" 
-                        edit-mode="ctrl.editMode"
-                        ng-show="ctrl.pdfProperty.currentPage == page.pagenumb" >
+                          component-id="page.componentid"
+                          option="page.option"
+                          pdf-obj="page.pdfobj" 
+                          page-numb="page.pagenumb" 
+                          edit-mode="ctrl.editMode"
+                          ng-show="ctrl.pdfProperty.currentPage == page.pagenumb" >
                 </painter> 
             </div>
         </div>

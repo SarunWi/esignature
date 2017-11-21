@@ -1,4 +1,8 @@
-<div id="{{$ctrl.template.containerId}}" class="fit-screen" ng-class="{scrollable:!$ctrl.editMode,unscrollable:$ctrl.editMode }" style="border:1px solid black;" > 
+<div id="{{$ctrl.template.containerId}}" 
+		class="fit-screen"  
+		ng-class="{ true: 'unscrollable', false: 'u-scrollable' }[$ctrl.editMode]" 
+		style="border:1px solid black;" > 
+		<!-- ng-class="{scrollable:!$ctrl.editMode,unscrollable:$ctrl.editMode }" --> 
 	<canvas id="{{$ctrl.template.canvasId}}" >
 	</canvas>
 	<canvas id="{{$ctrl.template.canvasTmpId}}" 

@@ -29,7 +29,6 @@ var painterComponent = function($q, $scope,$on) {
     ctrl.init_context = function() {
         if (ctrl.pdfObj) {
             ctrl.pdfObj.getPage(ctrl.pageNumb).then(function(page) {
-                ctrl.testback = '1234';
                 var viewport = page.getViewport(ctrl.option.scale);
                 // prepare container 
                 ctrl.componentObj.container = document.getElementById(ctrl.template.containerId);
@@ -118,7 +117,6 @@ var painterComponent = function($q, $scope,$on) {
     };
 
     ctrl.copyTmpImage = function(e) {
-    	console.log(ctrl.componentObj );
         ctrl.componentObj.canvasTmp.removeEventListener(PAINT_MOVE, ctrl.paint, false);
         ctrl.componentObj.context.drawImage(ctrl.componentObj.canvasTmp, 0, 0);
         ctrl.componentObj.contextTmp.clearRect(0, 0, ctrl.componentObj.canvasTmp.width, ctrl.componentObj.canvasTmp.height);
@@ -126,7 +124,6 @@ var painterComponent = function($q, $scope,$on) {
     };
 
     ctrl.startTmpImage = function(e) {
-
         e.preventDefault();
         ctrl.componentObj.canvasTmp.addEventListener(PAINT_MOVE, ctrl.paint, false);
 
@@ -149,10 +146,8 @@ var painterComponent = function($q, $scope,$on) {
 
         if (!isTouch) {
             var MOUSE_DOWN;
-
             document.body.addEventListener('mousedown', mousedown);
             document.body.addEventListener('mouseup', mouseup);
-            // console.log($scope);
             // $scope.$on('$destroy', removeEventListeners);
 
             ctrl.componentObj.canvasTmp.addEventListener('mouseenter', mouseenter);
@@ -186,7 +181,7 @@ var painterComponent = function($q, $scope,$on) {
             }
         }
     }
-   
+
     ctrl.init_context();
 }
 angular.module('drawingApp')
