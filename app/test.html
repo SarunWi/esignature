@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Labratory: Drawing on PDF file</title>
+	    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/lib/css/style.css" rel="stylesheet">
+	    <script src="/lib/js/jquery.min.js"></script>
+	    <script src="/lib/js/bootstrap.min.js"></script>
+	    <script src="/lib/js/angular.min.js"></script>
+	    <script src="/lib/js/$QDecorator.js"></script>
+	</head>
+	<body ng-app="testApp" ng-controller="testCtrl as ctrl">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" style="width:100%;">
+            <button class="btn btn-default "  >button1 </button> 
+            <button class="btn btn-primary "  >button2 </button>
+            <button class="btn btn-primary " ng-click="ctrl.toggleEditMode();"  >button3 </button>
+        </nav>
+		<div>
+			<canvas width="900" height="1200" style="border:1px solid black;overflow: auto;">
+			</canvas>
+		</div>
+	</body>
+	<script type="text/javascript">
+		angular.module('testApp',[])
+		.controller('testCtrl',['$q',function($q){
+			var ctrl = this;
+
+			ctrl.editmode = false;
+
+			ctrl.toggleEditMode = function(){
+				ctrl.editmode = !ctrl.editmode;				
+				console.log('edit mode :',ctrl.editmode);
+			}
+
+		}])
+	</script>
+</html>
