@@ -1,6 +1,10 @@
 angular.module('drawingApp', [])
     .controller('drawingController', ['$q', 'HttpFactory','$scope', function($q, HttpFactory,scope) {
         var ctrl = this;
+        ctrl.editMode = false;
+        ctrl.toggleEditMode = function(){
+            ctrl.editMode = !ctrl.editMode;
+        }
 
         ctrl.pdfComponent = [];
         ctrl.option = {

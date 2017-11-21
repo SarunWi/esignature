@@ -1,4 +1,8 @@
-<div id="{{$ctrl.template.containerId}}"  > 
-	<canvas id="{{$ctrl.template.canvasId}}" style="border:1px solid black;"></canvas>
-	<canvas id="{{$ctrl.template.canvasTmpId}}" style="position: absolute;top: 0;left: 0"></canvas>
+<div id="{{$ctrl.template.containerId}}" class="fit-screen" ng-class="{scrollable:!$ctrl.editMode,unscrollable:$ctrl.editMode }" style="border:1px solid black;" > 
+	<canvas id="{{$ctrl.template.canvasId}}" >
+	</canvas>
+	<canvas id="{{$ctrl.template.canvasTmpId}}" 
+			style="position: absolute;top: 0;left: 0; {{ !$ctrl.editMode? 'display: none !important':''}}"
+			ng-class="{ nondisplay :!$ctrl.editMode}" >
+	</canvas>
 </div>

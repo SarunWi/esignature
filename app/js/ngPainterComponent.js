@@ -8,7 +8,6 @@ var painterComponent = function($q, $scope,$on) {
 
     var ppts = [];
 
-
     ctrl.option = {
         scale: 1.5,
         line_width:  1,
@@ -187,6 +186,7 @@ var painterComponent = function($q, $scope,$on) {
             }
         }
     }
+   
     ctrl.init_context();
 }
 angular.module('drawingApp')
@@ -199,6 +199,7 @@ angular.module('drawingApp')
             option 		: '<',
             pdfObj 		: '<',
             pageNumb 	: '<',
-            canvasObj 	: '='
+            canvasObj 	: '=',
+            editMode    : '='
         }
     });
